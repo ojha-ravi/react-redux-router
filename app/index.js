@@ -1,9 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Hello } from "./hello"
 
 const App = () => {
-	return <Hello></Hello>;
+	return <div>React Simple Starter Kit</div>;
 }
 
 ReactDOM.render(<App />, document.querySelector(".container"));
