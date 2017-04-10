@@ -1,11 +1,15 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { BookListConnect } from "./src/containers/book_list";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 
-const App = () => {
-	return <div>
-		<BookListConnect></BookListConnect>
-	</div>;
-}
+import { App } from './src/components/app';
+import { rootReducer } from './src/reducers/index';
 
-ReactDOM.render(<App />, document.querySelector(".container"));
+const createStoreWithMiddleware = applyMiddleware()(createStore);
+
+ReactDOM.render(
+	<Provider store={createStoreWithMiddleware(rootReducer)}>
+		<App />
+	</Provider>
+	, document.querySelector('.container'));
