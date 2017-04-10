@@ -8,6 +8,10 @@ import { rootReducer } from './src/reducers/index';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
+// There is some issue here,
+// according to lesson it should be able to work,
+// There was no where told it is being told that we need store
+
 ReactDOM.render(
 	<Provider store={createStoreWithMiddleware(rootReducer)}>
 		<App />

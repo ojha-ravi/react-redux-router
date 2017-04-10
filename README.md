@@ -1,4 +1,4 @@
-### React Readux - Tinder Like App
+### React Readux - Understanding redux
 
 ```
 npm install
