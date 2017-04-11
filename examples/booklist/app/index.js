@@ -4,16 +4,16 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 
 import { App } from './src/components/app';
-// import { rootReducer } from './src/reducers/index';
+import { rootReducer } from './src/reducers/index';
 
-// const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 // There is some issue here,
 // according to lesson it should be able to work,
 // There was no where told it is being told that we need store
 
 ReactDOM.render(
-	// <Provider store={createStoreWithMiddleware(rootReducer)}>
+	<Provider store={createStoreWithMiddleware(rootReducer)}>
 		<App />
-	// </Provider>
+	</Provider>
 	, document.querySelector('.container'));
