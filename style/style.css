@@ -3,3 +3,13 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box
 }
+
+.container {
+	padding-top: 20px;
+	border-top: 1px solid black;
+}
+
+li:hover {
+	cursor: pointer;
+	background-color: beige;
+}
