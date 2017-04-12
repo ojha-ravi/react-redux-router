@@ -22,6 +22,11 @@ class SearchBar extends React.Component {
 
 	onSubmit(e) {
 		e.preventDefault();
+
+		this.props.fetchWeather(this.state.term);
+		this.setState({
+			term: ""
+		});
 	}
 
 	render() {
