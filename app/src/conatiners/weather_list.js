@@ -25,7 +25,7 @@ class WeatherList extends React.Component {
         <tr>
           <th>City</th>
           <th>Temperature (K)</th>
-          <th>Pressure (nhPa)</th>
+          <th>Pressure (hPa)</th>
           <th>Humidity (%)</th>
         </tr>
       </thead>
