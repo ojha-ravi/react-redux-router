@@ -13,3 +13,12 @@ li:hover {
 	cursor: pointer;
 	background-color: beige;
 }
+
+td, th {
+	vertical-align: middle !important;
+	text-align: center !important;
+}
+
+svg {
+	height: 150px;
+}

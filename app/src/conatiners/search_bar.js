@@ -49,8 +49,8 @@ function mapStateToProps() {
 
 }
 
-function mapcDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch) {
 	return bindActionCreators({fetchWeather}, dispatch);
 }
 
-export const SearchBarConnect = connect(null, mapcDispatchToProps)(SearchBar);
+export const SearchBarConnect = connect(null, mapDispatchToProps)(SearchBar);
