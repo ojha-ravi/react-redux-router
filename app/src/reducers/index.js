@@ -1,7 +1,6 @@
 import { combineReducers } from "redux";
-import { BooksReducer } from "./reducer_books" 
-import { ActiveBookReducer } from "./reducer_active_book"
+import WeatherRducer from "./reducer_weather";
 
 export const rootReducer = combineReducers({
-	state: (state = {}) => state
+	weather: WeatherRducer
 });
