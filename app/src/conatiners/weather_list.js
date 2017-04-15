@@ -1,6 +1,7 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { Chart } from "../components/chart"
+import { GoogleMap } from "../components/google_map";
 
 class WeatherList extends React.Component {
   renderWeather(cd) {
@@ -8,11 +9,12 @@ class WeatherList extends React.Component {
     const temps = cd.list.map(w => w.main.temp);
     const pressures = cd.list.map(w => w.main.pressure);
     const humidities = cd.list.map(w => w.main.humidity);
+    const {lon, lat} = cd.city.coord;
 
     console.log(temps, pressures, humidities);
 
     return <tr key={cityName}>
-      <td>{cityName}</td>
+      <td><GoogleMap lat={lat} lon={lon}></GoogleMap></td>
       <td><Chart data={temps} color="red" units={"K"}></Chart></td>
       <td><Chart data={pressures} color="green" units={"hPa"}></Chart></td>
       <td><Chart data={humidities} color="blue" units={"%"}></Chart></td>
