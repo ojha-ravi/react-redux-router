@@ -1,11 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { SearchBarConnect } from "../conatiners/search_bar";
-import { WeatherListConnect } from "../conatiners/weather_list"
 
-export const App = () => {
-	return <div>
-		<SearchBarConnect></SearchBarConnect>
-		<WeatherListConnect></WeatherListConnect>
-	</div>;
+export class App extends React.Component {
+	render() {
+		return <div>
+			Hello World
+			{this.props.children}
+		</div>;
+	}
 }
