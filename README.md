@@ -1,4 +1,4 @@
-### React Readux - Understanding redux
+### Understanding with example - React, Redux & Router
 
 ```
 npm install
